@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+            text-decoration: none;
+            list-style: none;
+            
+
+        }
+        .header{
+            background-color: rgb(0, 255, 208);
+            color: rgb(255, 255, 255);
+            padding: 48px;
+            display: flex;
+            text-decoration: none;
+            gap: 10rem;
+
+        }
+        
+        .logo{
+            font-size: 25px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .logo:hover{
+            color: darkorchid;
+            text-shadow: 0 0 25px darkorchid,
+                         0 0 50px darkorchid;
+            transform: scale(1.1);
+        }
+        span{
+            color: blue;
+        }
+        .navbar{
+            font-size: 20px;
+            color:white;
+            font-weight: 310;
+            margin: 0px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s ease;
+            letter-spacing: 2px;
+            word-spacing: 2rem;
+            text-decoration: none;
+            width: 600vw;
+
+        }
+        .navbar a:hover,
+        .navbar a.active{
+            color:blue;
+            border-bottom: 3px solid blue;
+
+        }
+        .contact{
+            padding: 10px 28px;
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+        .contact:hover{
+            background-color: blue;
+            box-shadow: 0 0 25px blue;
+            color: white;
+        }
+        .home{
+            width: 100%;
+            min-height: 100vh;
+            background: rgb(241,241,241);
+            display: flex;
+            align-items: center;
+            gap: 7em;
+            padding: 30px 12% 0;
+            text-decoration: none;
+
+        }
+        .home-contect{
+            max-width:  900px;
+
+        }
+        .home-contect h3{
+            font-size: 42px;
+        }
+        .home-contecth1{
+            font-size: 62px;
+            line-height: 1.2;
+        }
+        .home-contect p{
+            font-size: 18px;
+            margin: 25px 0 30px;
+        }
+        .btn-box{
+            width: 345px;
+            display: flex;
+            gap: 2em;
+        }
+        .btn-1{
+            padding: 15px 28px;
+            background-color: black;
+            color: white;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-1:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+        .btn-2{
+            padding: 15px 28px;
+            background-color: orangered;
+            color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-2:hover{
+            background-color: white;
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .image.box{
+            width: 45%;
+            bottom: 0;
+            right: 2cap;
+        }
+
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: blue;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: black;
+            width: 50px;
+        }
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background: black;
+        }
+        .about-img {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+            border-radius: 50%;
+        }
+        
+       
+        .about-img img:hover{
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px blue;
+            filter: grayscale(0%);
+        }
+        .about-content h2{
+            text-align: left;
+            color:white;
+            font-size: 42px;
+        }
+        .about-content h3{
+            font-size: 62px;
+            color: white;
+        }
+        .about-content p{
+            color:white;
+            font-size: 20px;
+            margin: 2em 0 3em;
+        
+        }
+        .skills{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background: white;
+
+        }
+        .skills-content{
+            max-width:  900px;
+            font-size: 20px;
+            color: black;
+
+        }
+        
+        .skills-contecth2{
+            font-size: 62px;
+            line-height: 1.2;
+        }
+        .skills-contect p{
+            font-size: 12px;
+            margin: 25px 0 30px;}
+        .Project{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background:black;
+
+        }
+        .Project-content{ max-width:  900px;
+            font-size: 20px;
+            color: white;
+
+        }
+        
+        .Project-content h2{
+            font-size: 62px;
+            line-height: 1.2;
+        }
+        .Project-content p{
+            font-size: 22px;
+            margin: 25px 0 30px;
+        color: white;}
+            
+        .Project-content.img {
+
+        }
+        .Resume{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 12% 8%;
+                gap: 10em;
+                background-color: white;
+
+            }
+            
+        .Resume-content{ max-width:  900px;
+            font-size: 20px;
+            color:white;}
+
+            
+        .Resume-contenth2{
+            font-size: 62px;
+            line-height: 1.2;
+            color:white ;
+        }
+        .Resume-content .button{
+           width: 100px;
+           height: 50px;
+        }
+        .Resume.btn{
+            padding: 15px 28px;
+            background-color: orangered;
+            color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            cursor: pointer;
+           
+        }
+
+        
+
+        .contact-form h2{
+            text-align: center;
+            margin-top: 3em;
+            margin-bottom: 1em;
+            font-size: 36px;
+        }
+        .contact-form form{
+            max-width: 50em;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        .contact-form form .input-box{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-form form .input-box input,
+        .contact-form form textarea{
+            width: 100%;
+            padding: 1.5em;
+            font-size: 18px;
+            color: black;
+            background: rgb(241,241,241);
+            border-radius: .8rem;
+            margin: 1rem 0;
+            resize: none;
+           }
+           .footer{
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 40px 0;
+            background-color: black;
+           }
+
+           .footer .social{
+            text-align: center;
+            padding-bottom: 25px;
+            color: white;
+           }
+           .footer .social a{
+            font-size: 24px;
+            color: white;
+            border: 2px solid orangered;
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            display:inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+            box-shadow: inset 0 0 10px orangered, 0 0 10px;
+            transition: 0.3s ease;
+           }
+           .footer .social a:hover{
+            transform: scale(1.2)translateY(-10px);
+            color: orangered;
+            border: 2px solid orangered;
+           }
+           .footer .ul{
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+    
+           }
+           
+           .footer ul li a{
+            color: white;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s ease;
+            letter-spacing: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        
+           }
+           .footer ul li a:hover{
+            border-bottom: 3px solid orangered;
+           }
+           .footer ul li{
+            display: inline-block;
+            padding: 0 15px;
+            
+           }
+           .footer  .copyright{
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            justify-content: center;
+            margin: 20px;
+            opacity: 0.7;
+            text-decoration: none;
+            
+           }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Hara</span>thi</a>
+        <nav class="navbar">
+            <a href="#" class="active">portfolio</a>
+            <a href="#" class="Services">Services</a>
+            <a href="#">Experience</a>
+            <a href="#">Projects</a>
+            <a href="#">Education</a>
+        </nav>
+
+        <a href="#" class="contact">Contact</a>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <br>
+            <br>
+            <br>
+            <h3>Hi</h3>
+            <h1>I'm <span>HARATHI<br></span> a Frontend Develper</h1>
+            <p>Frontend developers are the architects of the digital world, transforming designs into dynamic,<br> user-friendly, and visually stunning websites and applications.<br> With expertise in HTML, CSS, JavaScript, and frameworks like React, Angular, <br>and Vue, they craft seamless interfaces that captivate and engage users.<br> Frontend developers balance aesthetics with functionality, ensuring responsive designs adapt <br>to diverse devices and browsers. They prioritize accessibility,<br> optimization,streamlining user experiences that drive business growth and customer satisfaction.<br> 
+
+            </p>
+            <div class="btn-box">
+                <button class="btn-1">Hire ME</button>
+                <button class="btn-2">Experience</button>
+            </div>
+        </div>
+        <div class="img.box"> 
+        <img src="https://www.pngarts.com/files/7/Female-College-Student-PNG-Photo.png" width="500px" height="580"> 
+    
+
+        </div>
+    </section>
+        <section class="about">
+        
+    <div class="about">
+        <img src="https://purepng.com/public/uploads/large/purepng.com-female-studentstudentcollege-studentschool-studentfemale-student-1421526923122acyna.png" width="420px" height="580" >
+
+    </div>
+
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend<span>Develper</span></h3>
+        <p>
+            A frontend developer designs and builds the user interface and user experience (UI/UX)<br> of websites and applications using HTML, CSS, JavaScript, and frameworks like React, Angular, and Vue.<br> They ensure seamless functionality, responsiveness, and accessibility across devices and browsers. <br>Frontend developers bridge the gap between design and functionality, transforming visual concepts<br> into interactive digital experiences. With expertise in coding languages, design principles,<br> and industry tools, they craft intuitive interfaces that <br>engage users and drive business success.</p>
+         </p>
+         <a href="#" class="btn-2">Experience</a>
+    </div>
+    </section>
+    <section class="skills">
+    <img src="https://i.pinimg.com/originals/07/ea/42/07ea424ad2b7c2f54fba09ae3cbf40af.png" width="350px" height="400px">
+
+        <div class="skills-content">
+            <h2 class="heading">Skills <span>Section</span></h2>
+            <h3>Here are the key skills which I acquired</h3>
+            <p>
+                1.HTML(Hyper Text Markup Language)<br>
+                2.CSS(Cascading Style Sheets)<br>
+                3.JavaScript<br>
+                4.MDB Projects<br>
+            </p>
+            <h2 class="heading"><span>Certifications</span></h2>
+            <h3>Here are my certificates</h3>
+            <p>1.certificate from GUVI for Chatgpt for Everyone<br>
+                2.certificate from GREAT LEARNING for Introduction to Artificial Intelligence.<br>
+                3.certificate from DATAVALLEY for Bootcamp & Smart Hackathon.<br>
+                4.certificate from ALISON for Web Development with HTML&CSS for Beginners.<br>
+
+            </p>
+            <div class="btn-box"></div>
+                <button class="btn-1">MY PROJECTS</button>
+                <button class="btn-2">CERTIFICATES</button>
+            </div>
+            
+        </div>
+    </section>
+    <section class="Project">
+        
+            <img src="https://static.vecteezy.com/system/resources/previews/022/665/515/original/young-and-smart-cute-3d-girl-student-transparent-background-free-png.png" width="420px" height="580"  text-align:center;>
+            <div class="Project-content">
+            <h2 class="heading"><span>Projects</span></h2>
+            <h3>Here are my Projects</h3>
+            <p>
+                1.portfolio.<br>
+                2.Andhra pradesh tourist places.<br>
+                3.API.<br>
+            </p>
+            <div class="Resume-content">
+                <h2 class="heading"><span>Resume</span></h2>
+            
+                <h3>Here is my resume</h3>
+                <p>
+                    <h3>Click Here</h3>
+                </p>
+                <a href="resume.html" class="btn-2">RESUME</a>
+        
+                
+            
+            </div>
+        </section>
+        </div>
+    </section>
+    
+        
+    <section class="contact-form">
+        <h2 class="contact-me">Contact<span>Me</span></h2>
+        <form action="#">
+
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+            </div>
+            
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea name="" id="" cols="3o"
+            rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn-1">
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+            </li>
+                
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li></li>
+                <a href="#"></a>
+            </li>
+        </ul>
+        <p class="copyright">Copyright &copy;2024;Designed by HARATHI
+        </p>
+    </footer>
+
+    
+</body>
+</html>
